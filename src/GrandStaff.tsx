@@ -16,7 +16,7 @@ export const GrandStaff = (props: Props) => {
       <g fontSize="100">
         <Staves y="0" clef="g-clef" />
         <Staves y="200" clef="f-clef" />
-        <text fontSize="300" x="-25" y="300">
+        <text fontSize="300" y="300" textAnchor="end">
           &#xE000;
         </text>
         <BarLine height="300" />
