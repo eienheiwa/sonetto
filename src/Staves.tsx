@@ -1,5 +1,6 @@
 import React from "react";
 import _ from "lodash";
+import { Clef } from "./Clef";
 
 type Props = {};
 
@@ -24,6 +25,7 @@ export const Staves = (props: Props) => {
             y2={i * 25}
           />
         ))}
+        <Clef />
       </g>
     </svg>
   );
