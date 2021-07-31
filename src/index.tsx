@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import "./fonts/Bravura.otf"
+import "./fonts/Bravura.otf";
 import { Editor } from "./Editor";
 import reportWebVitals from "./reportWebVitals";
 

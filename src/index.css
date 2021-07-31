@@ -17,6 +17,13 @@ code {
   src: url('./fonts/Bravura.otf') format('opentype');
 }
 
+.editor {
+  margin: 10px auto;
+}
+
 .staves {
   font-family: Bravura;
+  font-size: 85px;
+  display: block;
+  margin: 0 auto;
 }
