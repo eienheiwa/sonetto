@@ -17,6 +17,11 @@ code {
   src: url('./fonts/Bravura.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Academico';
+  src: url('./fonts/AcademicoRegular.otf') format('opentype');
+}
+
 .editor {
   margin: 10px auto;
 }

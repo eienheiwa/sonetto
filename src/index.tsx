@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "./fonts/Bravura.otf";
+import "./fonts/AcademicoRegular.otf";
 import { Editor } from "./Editor";
 import reportWebVitals from "./reportWebVitals";
 
