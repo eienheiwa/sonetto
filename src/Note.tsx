@@ -34,7 +34,7 @@ const glyphs: { [D in Props["duration"]]: string } = {
 export const Note = (props: Props) => {
   let y = 100 - props.line * 25;
   return (
-    <text x={props.x} y={y}>
+    <text x={props.x} y={y} textAnchor="middle">
       {glyphs[props.duration]}
     </text>
   );
