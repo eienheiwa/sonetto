@@ -25,7 +25,7 @@ export const Staves = (props: Props) => {
             y2={i * 25}
           />
         ))}
-        <Clef />
+        <Clef kind="g-clef" />
       </g>
     </svg>
   );
