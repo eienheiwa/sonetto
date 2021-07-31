@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import { Clef } from "./Clef";
+import { Note } from "./Note";
 
 type Props = {};
 
@@ -26,6 +27,9 @@ export const Staves = (props: Props) => {
           />
         ))}
         <Clef kind="g-clef" />
+        <Note x={150} line={0} duration="1/4" />
+        <Note x={250} line={0.5} duration="1/4" />
+        <Note x={350} line={1} duration="1" />
       </g>
     </svg>
   );
