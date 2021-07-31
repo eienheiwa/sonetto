@@ -19,11 +19,11 @@ code {
 
 .editor {
   margin: 10px auto;
+  font-family: Bravura;
+  font-size: 85px;
 }
 
 .staves {
-  font-family: Bravura;
-  font-size: 85px;
   display: block;
   margin: 1em auto;
 }

@@ -5,6 +5,8 @@ import * as clef from "./Clef";
 import { Note } from "./Note";
 
 type Props = {
+  x?: string | number;
+  y?: string | number;
   clef: clef.Kind;
 };
 
@@ -12,10 +14,9 @@ export const Staves = (props: Props) => {
   return (
     <svg
       className="staves"
-      width="20em"
-      height="1em"
-      viewBox="0, 0, 2000, 100"
       overflow="visible"
+      x={props.x}
+      y={props.y}
     >
       <g fontSize="100">
         {_.range(5).map((i) => (
