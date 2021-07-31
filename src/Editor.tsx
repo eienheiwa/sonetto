@@ -1,12 +1,12 @@
 import React from "react";
-import { Staves } from "./Staves";
+import { GrandStaff } from "./GrandStaff";
 
 type Props = {};
 
 export const Editor = (props: Props) => {
   return (
     <div className="editor">
-      <Staves />
+      <GrandStaff />
     </div>
   );
 };

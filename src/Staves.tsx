@@ -1,9 +1,12 @@
 import React from "react";
 import _ from "lodash";
 import { Clef } from "./Clef";
+import * as clef from "./Clef";
 import { Note } from "./Note";
 
-type Props = {};
+type Props = {
+  clef: clef.Kind;
+};
 
 export const Staves = (props: Props) => {
   return (
@@ -26,7 +29,7 @@ export const Staves = (props: Props) => {
             y2={i * 25}
           />
         ))}
-        <Clef kind="g-clef" />
+        <Clef kind={props.clef} />
         <Note x={150} line={0} duration="1/4" />
         <Note x={250} line={0.5} duration="1/4" />
         <Note x={350} line={1} duration="1" />
