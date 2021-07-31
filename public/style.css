@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Bravura';
+  src: url('fonts/Bravura.otf') format('opentype');
+}
+
+.staves {
+  font-family: Bravura;
+}
