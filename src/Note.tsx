@@ -39,3 +39,17 @@ export const Note = (props: Props) => {
     </text>
   );
 };
+
+Note.width = {
+  "1":{width: 400},
+  "1/2":{width: 200},
+  "1/4":{width: 100},
+  "1/8":{width: 50},
+  "1/16":{width: 50},
+  "1/32":{width: 50},
+  "1/64":{width: 50},
+  "1/128":{width: 50},
+  "1/256":{width: 50},
+  "1/512":{width: 50},
+  "1/1024":{width: 50},
+};
