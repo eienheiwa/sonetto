@@ -19,7 +19,7 @@ export const Staves = (props: Props) => {
           <line
             key={i}
             stroke="black"
-            strokeWidth="1.5"
+            strokeWidth="3.25"
             x1="0"
             x2="2000"
             y1={i * 25}
