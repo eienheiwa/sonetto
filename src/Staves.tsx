@@ -35,7 +35,7 @@ export const Staves = (props: Props) => {
           />
         ))}
         <Clef x={updateX(Clef)} kind={props.clef} />
-        <TimeSig x={updateX(TimeSig)} top={3} bottom={4} />
+        <TimeSig x={updateX(TimeSig)} top={8} bottom={8} />
         <Note x={updateX(Note.width["1/4"])} line={0} duration="1/4" />
         <Note x={updateX(Note.width["1/4"])} line={0.5} duration="1/4" />
         <Note x={updateX(Note.width["1"])} line={1} duration="1" />
