@@ -10,10 +10,10 @@ export const TimeSig = (props: Props) => {
   let x = props.x || 0;
   return (
     <>
-      <text x={x} y="25">
+      <text x={x} y="25" textAnchor="middle">
         &#xE083;
       </text>
-      <text x={x} y="75">
+      <text x={x} y="75" textAnchor="middle">
         &#xE084;
       </text>
     </>
