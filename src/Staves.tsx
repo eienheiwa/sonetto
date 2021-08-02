@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import { Clef } from "./Clef";
+import { TimeSig } from "./TimeSig";
 import * as clef from "./Clef";
 import { Note } from "./Note";
 import { BarLine } from "./BarLine";
@@ -27,6 +28,7 @@ export const Staves = (props: Props) => {
           />
         ))}
         <Clef kind={props.clef} />
+        <TimeSig top={3} bottom={4} />
         <Note x={150} line={0} duration="1/4" />
         <Note x={250} line={0.5} duration="1/4" />
         <Note x={350} line={1} duration="1" />
