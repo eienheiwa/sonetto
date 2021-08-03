@@ -10,6 +10,20 @@ export type NoteSpec = {
   duration: Duration;
 };
 
+export const DURATIONS = [
+  "1",
+  "1/2",
+  "1/4",
+  "1/8",
+  "1/16",
+  "1/32",
+  "1/64",
+  "1/128",
+  "1/256",
+  "1/512",
+  "1/1024",
+];
+
 type Duration =
   | "1"
   | "1/2"
@@ -40,7 +54,7 @@ const glyphs: { [D in Duration]: string } = {
 export const Note = (props: Props) => {
   let y = 100 - props.note.line * 25;
   return (
-    <text x={props.x} y={y} textAnchor="middle">
+    <text x={props.x} y={y} textAnchor="middle" pointerEvents="none">
       {glyphs[props.note.duration]}
     </text>
   );
