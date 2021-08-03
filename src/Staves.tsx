@@ -3,7 +3,7 @@ import _ from "lodash";
 import { useImmer } from "use-immer";
 import { Clef, ClefKind } from "./Clef";
 import { TimeSig } from "./TimeSig";
-import { Note, NoteSpec } from "./Note";
+import { Duration, Note, NoteSpec } from "./Note";
 import { BarLine } from "./BarLine";
 import { EmptyColumn } from "./EmptyColumn";
 
@@ -11,6 +11,7 @@ type Props = {
   x?: string | number;
   y?: string | number;
   clef: ClefKind;
+  currentDuration: Duration;
 };
 
 export const Staves = (props: Props) => {
@@ -21,11 +22,7 @@ export const Staves = (props: Props) => {
     return prevX;
   };
 
-  const [notes, updateNotes] = useImmer([
-    { line: 0, duration: "1/4" },
-    { line: 0.5, duration: "1/4" },
-    { line: 1, duration: "1" },
-  ] as NoteSpec[]);
+  const [notes, updateNotes] = useImmer([] as NoteSpec[]);
 
   const pushNote = (note: NoteSpec) => {
     updateNotes((draft) => {
@@ -54,7 +51,11 @@ export const Staves = (props: Props) => {
             <Note x={nextX(Note.width[note.duration])} note={note} />
           </g>
         ))}
-        <EmptyColumn x={nextX(EmptyColumn)} pushNote={pushNote} />
+        <EmptyColumn
+          x={nextX(EmptyColumn)}
+          pushNote={pushNote}
+          currentDuration={props.currentDuration}
+        />
         <g textAnchor="end">
           <BarLine x="2000" height="100" />
         </g>

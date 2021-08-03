@@ -1,10 +1,11 @@
 import React from "react";
 import _ from "lodash";
-import { NoteSpec } from "./Note";
+import { Duration, NoteSpec } from "./Note";
 
 type Props = {
   x: number | string;
   pushNote: (note: NoteSpec) => void;
+  currentDuration: Duration;
 };
 
 export const EmptyColumn = (props: Props) => {
@@ -22,7 +23,7 @@ const newNote = (i: number, props: Props) => {
       y={y - 6.25}
       width="50"
       height="12.5"
-      onClick={(_) => props.pushNote({ line, duration: "1/4" })}
+      onClick={(_) => props.pushNote({ line, duration: props.currentDuration })}
     ></rect>
   );
 };

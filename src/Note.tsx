@@ -24,7 +24,7 @@ export const DURATIONS = [
   "1/1024",
 ];
 
-type Duration =
+export type Duration =
   | "1"
   | "1/2"
   | "1/4"

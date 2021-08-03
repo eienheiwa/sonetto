@@ -2,8 +2,11 @@ import React from "react";
 import { Staves } from "./Staves";
 import { BarLine } from "./BarLine";
 import { Brace } from "./Brace";
+import { Duration } from "./Note";
 
-type Props = {};
+type Props = {
+  currentDuration: Duration;
+};
 
 export const GrandStaff = (props: Props) => {
   return (
@@ -15,8 +18,8 @@ export const GrandStaff = (props: Props) => {
       overflow="visible"
     >
       <g fontSize="100">
-        <Staves y="0" clef="g-clef" />
-        <Staves y="200" clef="f-clef" />
+        <Staves y="0" clef="g-clef" currentDuration={props.currentDuration} />
+        <Staves y="200" clef="f-clef" currentDuration={props.currentDuration} />
         <Brace height="300" />
         <BarLine height="300" />
       </g>
