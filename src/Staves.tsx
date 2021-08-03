@@ -5,6 +5,7 @@ import { Clef, ClefKind } from "./Clef";
 import { TimeSig } from "./TimeSig";
 import { Note, NoteSpec } from "./Note";
 import { BarLine } from "./BarLine";
+import { EmptyColumn } from "./EmptyColumn";
 
 type Props = {
   x?: string | number;
@@ -26,6 +27,12 @@ export const Staves = (props: Props) => {
     { line: 1, duration: "1" },
   ] as NoteSpec[]);
 
+  const pushNote = (note: NoteSpec) => {
+    updateNotes((draft) => {
+      draft.push(note);
+    });
+  };
+
   return (
     <svg className="staves" overflow="visible" x={props.x} y={props.y}>
       <g fontSize="100">
@@ -42,9 +49,12 @@ export const Staves = (props: Props) => {
         ))}
         <Clef x={nextX(Clef)} kind={props.clef} />
         <TimeSig x={nextX(TimeSig)} top={3} bottom={4} />
-        {notes.map((note) => (
-          <Note x={nextX(Note.width[note.duration])} note={note} />
+        {notes.map((note, i) => (
+          <g key={i}>
+            <Note x={nextX(Note.width[note.duration])} note={note} />
+          </g>
         ))}
+        <EmptyColumn x={nextX({ width: 0 })} pushNote={pushNote} />
         <g textAnchor="end">
           <BarLine x="2000" height="100" />
         </g>

@@ -27,3 +27,11 @@ code {
   display: block;
   margin: 1em auto;
 }
+
+.new-note {
+  opacity: 0.25;
+}
+
+.new-note:hover {
+  opacity: 1;
+}
