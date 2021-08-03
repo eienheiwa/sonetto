@@ -1,5 +1,6 @@
 import React from "react";
 import _ from "lodash";
+import { useImmer } from "use-immer";
 import { Clef, ClefKind } from "./Clef";
 import { TimeSig } from "./TimeSig";
 import { Note, NoteSpec } from "./Note";
@@ -19,11 +20,11 @@ export const Staves = (props: Props) => {
     return prevX;
   };
 
-  const notes: NoteSpec[] = [
+  const [notes, updateNotes] = useImmer([
     { line: 0, duration: "1/4" },
     { line: 0.5, duration: "1/4" },
     { line: 1, duration: "1" },
-  ];
+  ] as NoteSpec[]);
 
   return (
     <svg className="staves" overflow="visible" x={props.x} y={props.y}>
