@@ -26,3 +26,5 @@ const newNote = (i: number, props: Props) => {
     ></rect>
   );
 };
+
+EmptyColumn.width = 25;

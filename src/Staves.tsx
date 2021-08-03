@@ -54,7 +54,7 @@ export const Staves = (props: Props) => {
             <Note x={nextX(Note.width[note.duration])} note={note} />
           </g>
         ))}
-        <EmptyColumn x={nextX({ width: 0 })} pushNote={pushNote} />
+        <EmptyColumn x={nextX(EmptyColumn)} pushNote={pushNote} />
         <g textAnchor="end">
           <BarLine x="2000" height="100" />
         </g>
