@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const BarLine = (props: Props) => {
-  let x = props.x == undefined ? 0 : props.x;
+  let x = props.x || 0;
   return (
     <g transform={`translate(${x}, ${props.height})`}>
       <text
