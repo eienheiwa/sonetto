@@ -1,15 +1,14 @@
 import React from "react";
 import _ from "lodash";
-import { Clef } from "./Clef";
+import { Clef, ClefKind } from "./Clef";
 import { TimeSig } from "./TimeSig";
-import * as clef from "./Clef";
 import { Note, NoteSpec } from "./Note";
 import { BarLine } from "./BarLine";
 
 type Props = {
   x?: string | number;
   y?: string | number;
-  clef: clef.Kind;
+  clef: ClefKind;
 };
 
 export const Staves = (props: Props) => {

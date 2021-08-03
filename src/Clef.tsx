@@ -2,10 +2,10 @@ import React from "react";
 
 type Props = {
   x?: string | number;
-  kind: Kind;
+  kind: ClefKind;
 };
 
-export type Kind = "g-clef" | "f-clef";
+export type ClefKind = "g-clef" | "f-clef";
 
 export const Clef = (props: Props) => {
   let x = props.x || 0;
